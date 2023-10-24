@@ -1,10 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { connectDB } from "/util/database.js";
 
-export default function Home() {
-    return (
-        <main className={styles.main}>
-            <div className={styles.description}></div>
-        </main>
-    );
+export default async function Home() {
+    let client = await connectDB;
+    const db = client.db("forum");
+    let result = await db.collection("post").find().toArray();
+
+    return <main>{result[0].title}</main>;
 }
