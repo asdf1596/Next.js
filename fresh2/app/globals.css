@@ -38,3 +38,15 @@ body {
     border-bottom: 1px solid grey;
     line-height: 0px;
 }
+.navbar {
+    background: white;
+    padding: 20px;
+}
+.navbar a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+.logo {
+    font-weight: bold;
+}

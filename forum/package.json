@@ -1,17 +1,20 @@
 {
-  "name": "forum",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "mongodb": "^6.2.0",
-    "next": "13.5.6",
-    "react": "^18",
-    "react-dom": "^18"
-  }
+    "browser": {
+        "child_process": false
+    },
+    "name": "forum",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "mongodb": "^6.2.0",
+        "next": "13.5.6",
+        "react": "^18",
+        "react-dom": "^18"
+    }
 }
