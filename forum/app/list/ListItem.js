@@ -14,7 +14,8 @@ export default function ListItem({ result }) {
                     <button
                         className="list-btn"
                         onClick={(e) => {
-                            fetch("/api/post/delete", {
+                            fetch("/api/post/del", {
+                                //del 이랑 delete랑 뭐가 다름?????????????????
                                 method: "POST",
                                 body: result[i]._id,
                             }).then(() => {
