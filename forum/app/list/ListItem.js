@@ -17,13 +17,17 @@ export default function ListItem({ result }) {
                             fetch("/api/post/del", {
                                 method: "POST",
                                 body: result[i]._id,
-                            }).then(() => {
-                                e.target.parentElement.style.opacity = 0;
-                                setTimeout(() => {
-                                    e.target.parentElement.style.display =
-                                        "none";
-                                }, 1000);
-                            });
+                            })
+                                .then((r) => {
+                                    r.json;
+                                })
+                                .then(() => {
+                                    e.target.parentElement.style.opacity = 0;
+                                    setTimeout(() => {
+                                        e.target.parentElement.style.display =
+                                            "none";
+                                    }, 1000);
+                                });
                         }}
                     >
                         🗑️
