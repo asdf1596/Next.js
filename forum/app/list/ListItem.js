@@ -1,4 +1,5 @@
 "use client";
+//del 이랑 delete랑 뭐가 다름?????????????????
 import Link from "next/link";
 export default function ListItem({ result }) {
     return (
@@ -15,8 +16,7 @@ export default function ListItem({ result }) {
                         className="list-btn"
                         onClick={(e) => {
                             fetch("/api/post/del", {
-                                //del 이랑 delete랑 뭐가 다름?????????????????
-                                method: "POST",
+                                method: "DELDTE",
                                 body: result[i]._id,
                             }).then(() => {
                                 e.target.parentElement.style.opacity = 0;
