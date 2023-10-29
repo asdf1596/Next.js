@@ -14,8 +14,9 @@ export default function ListItem({ result }) {
                     <button
                         className="list-btn"
                         onClick={(e) => {
-                            fetch("/api/post/del?idd=aa", {
+                            fetch("/api/post/delete", {
                                 method: "POST",
+                                body: result[i]._id,
                             }).then(() => {
                                 e.target.parentElement.style.opacity = 0;
                                 setTimeout(() => {
