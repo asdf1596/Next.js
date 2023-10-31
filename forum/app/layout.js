@@ -2,9 +2,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import LoginBtn from "./LoginBtn";
-import LogOutBtn from "./LogOutBtn";
+import LogoutBtn from "./LogoutBtn";
 import { getServerSession } from "next-auth";
-import { authOptions } from "next-auth";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,11 +21,12 @@ export default async function RootLayout({ children }) {
                     <Link href="/" className="logo">
                         Appleforum
                     </Link>
+                    <Link href="/register">register</Link>
                     <Link href="/list">List</Link>
                     <Link href="/write">Write</Link>
                     {session ? (
                         <span>
-                            {session.user.name} <LogOutBtn />{" "}
+                            {session.user.name} <LogoutBtn></LogoutBtn>
                         </span>
                     ) : (
                         <LoginBtn></LoginBtn>
