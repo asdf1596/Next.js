@@ -24,7 +24,7 @@ export default async function RootLayout({ children }) {
                 className={
                     cookie != undefined && cookie.value == "dark"
                         ? "dark-mode"
-                        : "white-mode"
+                        : ""
                 }
             >
                 <div className="navbar">
