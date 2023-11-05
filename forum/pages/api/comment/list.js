@@ -2,6 +2,7 @@ import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 
 export default async function handler(req, res) {
+    console.log("sfdsfsf" + req.query.id);
     const db = (await connectDB).db("forum");
     let result = await db
         .collection("comment")

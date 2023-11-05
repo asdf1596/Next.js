@@ -4,12 +4,15 @@ export default function Comment(props) {
     let [Comment, setComment] = useState("");
     let [data, setData] = useState([]);
     useEffect(() => {
-        fetch("/api/Comment/list?id=" + props._id)
+        fetch("/api/comment/list?id=" + props._id)
             .then((r) => r.json())
             .then((result) => {
                 setData(result);
+                console.log("jklkjjkl" + result);
             });
     }, []);
+    //console.log(data);
+    //console.log(data);
     return (
         <div>
             <hr></hr>

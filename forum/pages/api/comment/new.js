@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         let 저장할거 = {
             content: req.body.comment,
             parent: new ObjectId(req.body._id),
-            author: session.user.email,
+            //author: session.user.email,
         };
         let db = (await connectDB).db("forum");
         let result = await db.collection("comment").insertOne(저장할거);
